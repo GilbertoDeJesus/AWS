@@ -1,0 +1,26 @@
+<div class="container mb-5 mt-5">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h1><em>Quotes</em></h1>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let quote of quotes; index as i; first as isFirst">
+      <blockquote class="blockquote ">
+        <div class="card text-center shadow-sm" style="width: 100%;">
+          <div class="card-body">
+            <p class="card-title">{{quote.quote}}</p>
+            <h6 class="card-subtitle mb-2 text-muted">
+              <footer class="blockquote-footer"><cite title="Source Title">{{quote.author}}</cite></footer>
+            </h6>
+          </div>
+          <div class="card-footer bg-transparent ">
+            <a class="nav-link" [routerLink]="['/quotedetail',quote.id]" class="btn btn-outline-primary">Details</a>
+          </div>
+        </div>
+      </blockquote>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,119 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12" *ngFor="let wf of weatherForecast">
+      <div class="card text-center">
+        <div class="card-header">
+          El clima de hoy es:
+        </div>
+        <div class="card-body">
+          <div [ngSwitch]="wf.main">
+            <div *ngSwitchCase="'Thunderstorm'">
+              <h5 class="card-title">Tormenta</h5>
+            </div>
+            <div *ngSwitchCase="'Drizzle'">
+              <h5 class="card-title">Llovizna</h5>
+            </div>
+            <div *ngSwitchCase="'Rain'">
+              <h5 class="card-title">Lluvia</h5>
+            </div>
+            <div *ngSwitchCase="'Snow'">
+              <h5 class="card-title">Nieve</h5>
+            </div>
+            <div *ngSwitchCase="'Mist'">
+              <h5 class="card-title">Niebla</h5>
+            </div>
+            <div *ngSwitchCase="'Smoke'">
+              <h5 class="card-title">Humo</h5>
+            </div>
+            <div *ngSwitchCase="'Haze'">
+              <h5 class="card-title">Neblina</h5>
+            </div>
+            <div *ngSwitchCase="'Fog'">
+              <h5 class="card-title">Niebla</h5>
+            </div>
+            <div *ngSwitchCase="'Sand'">
+              <h5 class="card-title">Arenoso</h5>
+            </div>
+            <div *ngSwitchCase="'Ash'">
+              <h5 class="card-title">Ceniza</h5>
+            </div>
+            <div *ngSwitchCase="'Squall'">
+              <h5 class="card-title">Chubasco</h5>
+            </div>
+            <div *ngSwitchCase="'Tornado'">
+              <h5 class="card-title">Tornado</h5>
+            </div>
+            <div *ngSwitchCase="'Clear'">
+              <h5 class="card-title">Cielo despejado</h5>
+            </div>
+            <div *ngSwitchCase="'Clouds'">
+              <h5 class="card-title">Nublado</h5>
+            </div>
+            <div *ngSwitchDefault>Not found</div>
+          </div>
+          <div [ngSwitch]="wf.icon">
+            <div *ngSwitchCase="'01d'">
+              <img src="./assets/icons/{{wf.icon}}.png" alt="">
+            </div>
+            <div *ngSwitchCase="'01n'">
+              <img src="./assets/icons/{{wf.icon}}.png" alt="">
+            </div>
+            <div *ngSwitchCase="'02d'">
+              <img src="./assets/icons/{{wf.icon}}.png" alt="">
+            </div>
+            <div *ngSwitchCase="'02n'">
+              <img src="./assets/icons/{{wf.icon}}.png" alt="">
+            </div>
+            <div *ngSwitchCase="'03d'">
+              <img src="./assets/icons/{{wf.icon}}.png" alt="">
+            </div>
+            <div *ngSwitchCase="'03n'">
+              <img src="./assets/icons/{{wf.icon}}.png" alt="">
+            </div>
+            <div *ngSwitchCase="'04d'">
+              <img src="./assets/icons/{{wf.icon}}.png" alt="">
+            </div>
+            <div *ngSwitchCase="'04n'">
+              <img src="./assets/icons/{{wf.icon}}.png" alt="">
+            </div>
+            <div *ngSwitchCase="'09d'">
+              <img src="./assets/icons/{{wf.icon}}.png" alt="">
+            </div>
+            <div *ngSwitchCase="'09n'">
+              <img src="./assets/icons/{{wf.icon}}.png" alt="">
+            </div>
+            <div *ngSwitchCase="'10d'">
+              <img src="./assets/icons/{{wf.icon}}.png" alt="">
+            </div>
+            <div *ngSwitchCase="'10n'">
+              <img src="./assets/icons/{{wf.icon}}.png" alt="">
+            </div>
+            <div *ngSwitchCase="'11d'">
+              <img src="./assets/icons/{{wf.icon}}.png" alt="">
+            </div>
+            <div *ngSwitchCase="'11n'">
+              <img src="./assets/icons/{{wf.icon}}.png" alt="">
+            </div>
+            <div *ngSwitchCase="'13d'">
+              <img src="./assets/icons/{{wf.icon}}.png" alt="">
+            </div>
+            <div *ngSwitchCase="'13n'">
+              <img src="./assets/icons/{{wf.icon}}.png" alt="">
+            </div>
+            <div *ngSwitchCase="'50d'">
+              <img src="./assets/icons/{{wf.icon}}.png" alt="">
+            </div>
+            <div *ngSwitchCase="'50n'">
+              <img src="./assets/icons/{{wf.icon}}.png" alt="">
+            </div>
+            <div *ngSwitchDefault>Not found</div>
+          </div>
+          <p class="card-text">{{wf.description}}</p>
+        </div>
+        <div class="card-footer text-muted">
+          1 hour ago
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
