@@ -14,6 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { GetServiceComponent } from './get-service/get-service.component';
 import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
 import { WeatherForecastComponent } from './weather-forecast/weather-forecast.component';
+import { FormsModule } from '@angular/forms';
+import { HeroFormComponent } from './hero-form/hero-form.component';
 
 @NgModule({
   declarations: [
@@ -26,12 +28,14 @@ import { WeatherForecastComponent } from './weather-forecast/weather-forecast.co
     NotFoundComponent,
     GetServiceComponent,
     QuoteDetailComponent,
-    WeatherForecastComponent
+    WeatherForecastComponent,
+    HeroFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
